@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--
+    - Custom CSS Link
+   -->
+  <link rel="stylesheet" href="./Assets/css/style.css">
+  <link rel="stylesheet" href="./Assets/css/signup.css">
+  <!--
+      - Google font link
+     -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+
+<body>
+  <!--
+    - HEADER
+   -->
+  <header class="header">
+    <div class="container">
+      <a href="#" class="logo">
+        <h2 class="h2">Logo</h2>
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <div class="navbar-top">
+          <button class="nav-toggle-btn" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+        <ul class="navbar-list">
+          <li class="navbar-item"><a href="#" class="navbar-link active">Home</a></li>
+          <li class="navbar-item"><a href="#" class="navbar-link">About</a></li>
+          <li class="navbar-item"><a href="#" class="navbar-link">Services</a></li>
+          <li class="navbar-item"><a href="#" class="navbar-link">Pricing</a></li>
+          <li class="navbar-item"><a href="#" class="navbar-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="nav-toggle-btn" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <div class="overlay" data-overlay data-nav-toggler></div>
+    </div>
+  </header>
+  <!--
+    - FORM
+   -->
+  <div class="login-container">
+    <form action="#" id="main">
+      <h1>Sign In</h1>
+      <input id="email" type="email" placeholder="Email" class="emailTop">
+      <span class="error-icon1"><ion-icon name="alert"></ion-icon></span>
+      <p class="email-error error-message">Looks like this is not an email</p>
+
+      <input id='password' type="password" placeholder="password" class="passwordTop">
+      <span class="error-icon2"><ion-icon name="alert"></ion-icon></span>
+      <p class="password-error error-message">Password cannot be empty</p>
+
+      <button id="login" type="submit">Login</button>
+      <p class="or"><span>or</span></p>
+      <button id="sign-up">Sign Up</button>
+    </form>
+
+    <form id="create-acct">
+      <h1>Create an Account</h1>
+      <input id="email-signup" type="text" placeholder="Email" class="email-signup">
+      <span class="error-icon3"><ion-icon name="alert"></ion-icon></span>
+      <p class="email-signup-error error-message">Email cannot be empty</p>
+
+      <input id="confirm-email-signup" type="email" placeholder="Confirm Email" class="confirm-email-signup">
+      <span class="error-icon4"><ion-icon name="alert"></ion-icon></span>
+      <p class="confirm-email-signup-error error-message">Email field do not match. Try again</p>
+
+      <input id="password-signup" type="password" placeholder="Password" class="password-signup">
+      <span class="error-icon5"><ion-icon name="alert"></ion-icon></span>
+      <p class="password-signup-error error-message">Password cannot be empty</p>
+
+      <input id="confirm-password-signup" type="password" placeholder="Confirm password"
+        class="confirm-password-signup">
+      <span class="error-icon6"><ion-icon name="alert"></ion-icon></span>
+      <p class="confirm-password-signup-error error-message">Password cannot be empty</p>
+
+      <button id="create-acct-btn" type="submit">Create Account</button>
+      <button id="return-btn">Return to login</button>
+    </form>
+  </div>
+  <!--
+    - Custom JS Link
+   -->
+  <script src="./Assets/js/script.js"></script>
+  <script src="./Assets/js/signup.js" type="module"></script>
+  <!--
+    _ IonIcons Link
+   -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
