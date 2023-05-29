@@ -72,16 +72,82 @@ createActBtn.addEventListener("click", () => {
 
   signUpEmail = signUpEmailIn.value;
   confirmSignUpEmail = confirmSignupEmailIn.value;
+
   if (signUpEmail != confirmSignUpEmail) {
-    window.alert("Email field do not match. Try again");
+    signUpEmailIn.style.borderColor = "red";
+    confirmSignupEmailIn.style.borderColor = "red";
+    emailSignUpErrorText.style.display = "block";
+    confirmEmailSignUpErrorText.style.display = "block";
+    emailSignUpErrorIcon.style.opacity = 1;
+    confirmEmailSignUpErrorIcon.style.opacity = 1;
+    emailSignUpErrorText.textContent = "Email field do not match. Try again";
+    confirmEmailSignUpErrorText.textContent =
+      "Email field do not match. Try again";
+    setTimeout(() => {
+      emailSignUpErrorText.style.display = "none";
+      confirmEmailSignUpErrorText.style.display = "none";
+    }, 4000);
     isVerified = false;
+    // window.alert("Email field do not match. Try again");
+  } else if (signUpEmail.trim() === "" || confirmSignUpEmail.trim() === "") {
+    signUpEmailIn.style.borderColor = "red";
+    confirmSignupEmailIn.style.borderColor = "red";
+    emailSignUpErrorText.style.display = "block";
+    confirmEmailSignUpErrorText.style.display = "block";
+    emailSignUpErrorIcon.style.opacity = 1;
+    confirmEmailSignUpErrorIcon.style.opacity = 1;
+    emailSignUpErrorText.textContent = "Email cannot be empty";
+    confirmEmailSignUpErrorText.textContent = "Email cannot be empty";
+    setTimeout(() => {
+      emailSignUpErrorText.style.display = "none";
+      confirmEmailSignUpErrorText.style.display = "none";
+    }, 4000);
+    isVerified = false;
+  } else {
+    signUpEmailIn.style.borderColor = "blueviolet";
+    confirmSignupEmailIn.style.borderColor = "blueviolet";
   }
 
   signUpPassword = signUpPasswordIn.value;
   confirmSignUpPassword = confirmSignUpPasswordIn.value;
+
   if (signUpPassword != confirmSignUpPassword) {
-    window.alert("Password field do not match. Try again");
+    signUpPasswordIn.style.borderColor = "red";
+    confirmSignUpPasswordIn.style.borderColor = "red";
+    passwordSignUpErrorText.style.display = "block";
+    confirmPasswordSignUpErrorText.style.display = "block";
+    passwordSignUpErrorIcon.style.opacity = 1;
+    confirmPasswordSignUpErrorIcon.style.opacity = 1;
+    passwordSignUpErrorText.textContent =
+      "Password field do not match. Try again";
+    confirmPasswordSignUpErrorText.textContent =
+      "Password field do not match. Try again";
+    setTimeout(() => {
+      passwordSignUpErrorText.style.display = "none";
+      confirmPasswordSignUpErrorText.style.display = "none";
+    }, 4000);
     isVerified = false;
+    // window.alert("Password field do not match. Try again");
+  } else if (
+    signUpPassword.trim() === "" ||
+    confirmSignUpPassword.trim() === ""
+  ) {
+    signUpPasswordIn.style.borderColor = "red";
+    confirmSignUpPasswordIn.style.borderColor = "red";
+    passwordSignUpErrorText.style.display = "block";
+    confirmPasswordSignUpErrorText.style.display = "block";
+    passwordSignUpErrorIcon.style.opacity = 1;
+    confirmPasswordSignUpErrorIcon.style.opacity = 1;
+    passwordSignUpErrorText.textContent = "Password cannot be empty";
+    confirmPasswordSignUpErrorText.textContent = "Password cannot be empty";
+    setTimeout(() => {
+      passwordSignUpErrorText.style.display = "none";
+      confirmPasswordSignUpErrorText.style.display = "none";
+    }, 4000);
+    isVerified = false;
+  } else {
+    signUpPasswordIn.style.borderColor = "blueviolet";
+    confirmSignUpPasswordIn.style.borderColor = "blueviolet";
   }
 
   if (

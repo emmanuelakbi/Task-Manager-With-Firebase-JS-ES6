@@ -49,7 +49,11 @@ h1 {
 }
 
 .error-icon1 ion-icon,
-.error-icon2 ion-icon {
+.error-icon2 ion-icon,
+.error-icon3 ion-icon,
+.error-icon4 ion-icon,
+.error-icon5 ion-icon,
+.error-icon6 ion-icon {
   background-color: rgb(255, 92, 92);
   color: white;
   border-radius: 50%;
@@ -68,7 +72,11 @@ h1 {
 }
 
 .email-error,
-.password-error {
+.password-error,
+.email-signup-error,
+.confirm-email-signup-error,
+.password-signup-error,
+.confirm-password-signup-error {
   display: none;
 }
 
