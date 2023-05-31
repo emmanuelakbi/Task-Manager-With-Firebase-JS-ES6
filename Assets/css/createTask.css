@@ -105,11 +105,11 @@ body {
   font-size: 16px;
 }
 
-[placeholder]:focus {
+/* [placeholder]:focus {
   transition: text-indent 0.4s 0.4s ease;
   text-indent: -10rem;
   opacity: 1;
-}
+} */
 
 .left-div .input-field {
   display: block;
